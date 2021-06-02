@@ -35,10 +35,13 @@
 		<beans:property name="order" value="3"/>
 	</beans:bean>
 	
-	<context:component-scan base-package="com.SpringBoard.Cha" />
+	<!-- 소스보고 주석 처리 함 -->
+	<!-- <context:component-scan base-package="com.SpringBoard.Cha" /> -->
 	<!-- controller,dao,service는 보고 새로 추가한 부분 -->
 	<context:component-scan base-package="com.SpringBoard.controller"/>
 	<context:component-scan base-package="com.SpringBoard.dao"/>
 	<context:component-scan base-package="com.SpringBoard.service"/>
+	
+
 
 </beans:beans>
