@@ -1,4 +1,4 @@
-package com.SpringBoard.dto;
+package com.SpringBoard.Cha.dto;
 /*
  * 테이블명=>CHAUSER
   이름         널?       유형            
