@@ -21,7 +21,7 @@
 		<property name="typeAliasesPackage" value="com.SpringBoard.Cha.dto"/>
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:com/SpringBoard/mapper/*.xml</value>
+				<value>classpath:com/SpringBoard/Cha/mapper/*.xml</value>
 			</list>
 		</property>
 	</bean>
