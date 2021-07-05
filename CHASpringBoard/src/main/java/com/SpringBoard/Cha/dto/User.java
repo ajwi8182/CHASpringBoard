@@ -11,7 +11,7 @@ JOIN_DATE           DATE          -회원가입일
 LAST_LOGIN          DATE          -마지막 로그인
 STATUS              NUMBER(1)   -회원 상태 : 1(일반회원),9(관리자)
  * */
-public class UserDTO {
+public class User {
 	private String id;
 	private String passwd;
 	private String name;
@@ -20,7 +20,7 @@ public class UserDTO {
 	private String lastLogin;
 	private int status;
 	
-	public UserDTO() {
+	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
