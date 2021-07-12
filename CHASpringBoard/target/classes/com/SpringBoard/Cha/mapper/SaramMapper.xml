@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.SpringBoard,cha.mapper">
+	<insert id="insertSaram"><!-- 회원가입(회원등록) -->
+		insert into saram values(#{id},#{pass},#{name},#{email},#{joinDate},#{lastLogin},#{status})
+	</insert>
+
+</mapper>

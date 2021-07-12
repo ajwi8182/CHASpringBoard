@@ -5,32 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>CHA SPRING BOARD</title>
-<script language="JavaScript">
-function userCreate(){
-	if(joinForm.id.value==""){
-		alert("아이디를 입력하세요");
-		joinForm.id.focus();
-		return;
-	}
-	if(joinForm.passwd.value=""){
-		alert("비밀번호를 입력하세요");
-		joinForm.passwd.focus();
-		return;
-	}
-	if(joinForm.name.value=""){
-		alert("이름을 입력하세요");
-		joinForm.name.focus();
-		return;
-	}
-	if(joinForm.email.value=""){
-		alert("이메일을 입력하세요");
-		joinForm.email.focus();
-		return;
-	}
-	joinForm.action="${pageContext.request.contextPath}"
-	
-}
-</script>
+
 </head>
 <body>
 	<form name="joinForm" method="post">
@@ -52,11 +27,12 @@ function userCreate(){
 				<td><input type="text" name="email" value=""></td>
 			</tr>
 			<tr>
-			<td>
-				<button type="submit">회원가입</button>
-			</td>
-		</tr>
+				<td>
+					<button type="submit">회원가입</button>
+				</td>
+			</tr>
 		</table>
 	</form>
+
 </body>
 </html>
