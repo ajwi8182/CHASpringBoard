@@ -1,7 +1,6 @@
 package com.SpringBoard.Cha.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,10 +13,10 @@ public class JoinController {
 	public String join() {
 			return "join_form";
 	}
-/*
-	@RequestMapping(value="/join_j", method =RequestMethod.POST)
-	public String join(@ModelAttribute User user) {
+
+	@RequestMapping(value="/join", method=RequestMethod.POST)
+	public String join(@ModelAttribute Saram saram) {
 		return "join_display";
 	}
-	*/
+	
 }

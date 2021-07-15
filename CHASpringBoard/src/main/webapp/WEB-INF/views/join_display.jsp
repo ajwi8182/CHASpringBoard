@@ -8,9 +8,9 @@
 </head>
 <body>
 	<h1>회원가입 확인</h1>
-	<ul>아이디=${user.id }</ul>
-	<ul>비밀번호=${user.passwd }</ul>
-	<ul>이름 =${user.name }</ul>
-	<ul>이메일=${user.email }</ul>
+	<ul>아이디=${saram.id }</ul>
+	<ul>비밀번호=${saram.passwd }</ul>
+	<ul>이름 =${saram.name }</ul>
+	<ul>이메일=${saram.email }</ul>
 </body>
 </html>
