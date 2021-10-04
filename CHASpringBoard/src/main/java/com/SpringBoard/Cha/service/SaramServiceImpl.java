@@ -9,18 +9,22 @@ import com.SpringBoard.Cha.dao.SaramDAO;
 import com.SpringBoard.Cha.dto.Saram;
 
 @Service
-public class SaramServiceImpl implements SaramService{
+public class SaramServiceImpl implements SaramService {
 	@Autowired
 	private SaramDAO saramDAO;
-	
+
 	@Override
 	public void addSaram(Saram saram) {
-		saramDAO.insertSaram(saram);	
-		}
-	
+		saramDAO.insertSaram(saram);
+	}
+
 	@Override
-	public List<Saram> getSaramList(){
+	public List<Saram> getSaramList() {
 		return saramDAO.selectSaramList();
-		
+	}
+
+	@Override
+	public Saram getSaraminfo(String id) {
+		return saramDAO.selectSaraminfo(id);
 	}
 }

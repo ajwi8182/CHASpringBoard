@@ -4,8 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CHA SPRING BOARD</title>
-
+<title>ChaSpringBoard</title>
+<script language="JavaScript">
+function saramJoin(){
+	if(joinForm.id.value==""){
+		alert("아이디를 입력하세요.");
+		joinForm.id.focus();
+		return;
+	}
+	if(joinForm.passwd.value==""){
+	alert("비밀번호를 입력하세요.");
+	joinForm.passwd.focus();
+	}
+	if(joinForm.name.value==""){
+	alert("이름을 입력하세요.");
+	joinForm.name.focus();
+	return;
+	}
+	joinForm.action ="${pageContext.request.contextPath}/join";
+	joinForm.submit();
+}
+</script>
 </head>
 <body>
 	<form name="joinForm" method="post">
@@ -28,7 +47,8 @@
 			</tr>
 			<tr>
 				<td>
-					<button type="submit">회원가입</button>
+					<!-- <button type="submit">회원가입</button> -->
+					<input type="button" value="회원가입" onClick="saramJoin();">
 				</td>
 			</tr>
 		</table>

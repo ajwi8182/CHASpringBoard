@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.SpringBoard.Cha.SaramMapper">
+<mapper namespace="com.SpringBoard.Cha.mapper.SaramMapper">
 	<insert id="insertSaram"><!-- 회원가입(회원등록) -->
-		insert into saram values(#{id},#{passwd},#{name},#{email},#{joinDate},#{lastLogin},#{status})
+		insert into saram values(#{id},#{passwd},#{name},#{email},sysdate,#{lastLogin},1)
 	</insert>
 	<select id="selectSaramList" resultType="Saram">
-		select * from saram order by joinDate
+		select * from saram order by id
+	</select>
+	
+	<!-- 로그인에서 사용 -->
+	<select id="selectSaraminfo" resultType="Saram">
+		select * from saram where id=#{id}
 	</select>
 </mapper>

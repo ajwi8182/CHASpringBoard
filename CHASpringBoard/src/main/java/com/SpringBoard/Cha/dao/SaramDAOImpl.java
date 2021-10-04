@@ -20,8 +20,11 @@ public class SaramDAOImpl implements SaramDAO{
 	}
 	@Override
 	public List<Saram> selectSaramList(){
-		return sqlSession.getMapper(SaramMapper.class).selectSaramList();
-				
+		return sqlSession.getMapper(SaramMapper.class).selectSaramList();		
 	}
 	
+	@Override
+	public Saram selectSaraminfo(String id) {
+		return sqlSession.getMapper(SaramMapper.class).selectSaraminfo(id);
+	}
 }

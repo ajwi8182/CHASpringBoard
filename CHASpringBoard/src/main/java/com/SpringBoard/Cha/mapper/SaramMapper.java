@@ -7,4 +7,5 @@ import com.SpringBoard.Cha.dto.Saram;
 public interface SaramMapper {
 	int insertSaram(Saram saram);
 	List<Saram> selectSaramList();
+	Saram selectSaraminfo(String id); //로그인시 사용
 }

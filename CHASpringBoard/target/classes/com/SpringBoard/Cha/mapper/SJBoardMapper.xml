@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SpringBoard.Cha.mapper.SJBoardMapper">
+	<insert id="insertBoard" parameterType="SJBoard">
+		<selectKey resultType="int" keyProperty="boardPostNum" order="BEFORE">
+			select chspboard_seq.nextval from dual
+		</selectKey>
+		<!-- 시퀀스 가 1씩 커지게 수정하기 ,E:\Java\workspace\mybatis\src\site\itwill\mapper/myComentMapper 참고! -->
+			insert into sjBoard values(#{boardPostNum},#{boardWriterId},#{boardSubject},sysdate
+			,#{boardReadCount},#{boardRef},#{boardReStep},#{boardReLevel},#{boardContent},#{ip},0)
+	</insert>
+	
+	<select id="selectBoardList" resultType="SJBoard">
+		select * from sjBoard order by board_post_num
+	</select>
+	
+	<select id="selectBoardPost" parameterType="String" resultType="SJBoard">
+		select * from sjBoard where board_subject=#{board_subject}
+	</select>
+	
+	<delete id="deleteBoardPost">
+		<!-- 게시물 삭제 -->
+		delete from sjBoard where board_subject=#{boardSubject}
+	</delete>
+</mapper>
