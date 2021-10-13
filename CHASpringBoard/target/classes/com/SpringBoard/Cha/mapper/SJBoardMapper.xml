@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.SpringBoard.Cha.mapper.SJBoardMapper">
-	<insert id="insertBoard" parameterType="SJBoard">
+	<insert id="insertBoard">
 		<selectKey resultType="int" keyProperty="boardPostNum" order="BEFORE">
 			select chspboard_seq.nextval from dual
 		</selectKey>
@@ -14,12 +14,12 @@
 		select * from sjBoard order by board_post_num
 	</select>
 	
-	<select id="selectBoardPost" parameterType="String" resultType="SJBoard">
-		select * from sjBoard where board_subject=#{board_subject}
+	<select id="selectBoardPost" parameterType="int" resultType="SJBoard">
+		select * from sjBoard where board_post_num=#{board_post_num}
 	</select>
 	
 	<delete id="deleteBoardPost">
 		<!-- 게시물 삭제 -->
-		delete from sjBoard where board_subject=#{boardSubject}
+		delete from sjBoard where board_post_num=#{board_post_num}
 	</delete>
 </mapper>

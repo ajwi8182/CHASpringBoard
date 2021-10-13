@@ -42,8 +42,8 @@ public class SJBoardController {
 	
 	//게시물 상세보기
 	@RequestMapping(value="/postDetail")
-	public String view(@RequestParam String boardSubject, Model model) throws SaraminfoNotFoundException{
-		model.addAttribute("sjBoard", sjBoardService.getBoardPost(boardSubject));
+	public String view(@RequestParam int boardPostNum, Model model) throws SaraminfoNotFoundException{
+		model.addAttribute("sjBoard", sjBoardService.getBoardPost(boardPostNum));
 		return "board/bPostDetail";
 	}
 	/*
@@ -56,8 +56,8 @@ public class SJBoardController {
 	}
 	*/
 	@RequestMapping("/postDelete") 
-	public String postDelte(@RequestParam String boardSubject, HttpSession session) {
-		sjBoardService.removeBoardPost(boardSubject);
+	public String postDelte(@RequestParam int boardPostNum, HttpSession session) {
+		sjBoardService.removeBoardPost(boardPostNum);
 		return "redirect:/board/display"; /*=> 이렇게 수정하고 , 삭제버튼 누르고 /display로 넘어가긴함*/
 	}
 	

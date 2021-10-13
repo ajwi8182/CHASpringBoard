@@ -25,13 +25,13 @@ public class SJBoardServiceImpl implements SJBoardService{
 	}
 	
 	@Override
-	public SJBoard getBoardPost(String boardSubject) {
-		return sjBoardDAO.selectBoardPost(boardSubject);
+	public SJBoard getBoardPost(int boardPostNum) {
+		return sjBoardDAO.selectBoardPost(boardPostNum);
 	}
 	
 	@Transactional
 	@Override
-	public void removeBoardPost(String boardSubject) {
-		sjBoardDAO.deleteBoardPost(boardSubject);
+	public void removeBoardPost(int boardPostNum) {
+		sjBoardDAO.deleteBoardPost(boardPostNum);
 	}
 }

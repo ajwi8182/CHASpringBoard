@@ -50,7 +50,7 @@ button {
 					<td>내용</td>
 					<td>
 						<!-- <input type="text" name="boardContent" value="${sjboard.BoardContent }"> -->
-							<textarea rows="30" cols="80" name="boardContent" id="boardSontent">
+							<textarea rows="30" cols="80" name="boardContent" id="boardContent">
 							</textarea>
 					</td>
 				</tr>
@@ -60,7 +60,6 @@ button {
 					</td>
 				</tr>
 			</table>
-
 		</form>
 	</div>
 </body>

@@ -19,8 +19,9 @@ table {
 <body>
 	<h1>SJ's Board</h1>
 	<div align="center">
-		<button
-			onclick="location.href='${pageContext.request.contextPath}/board/addPost';">글쓰기</button>
+	<input name="searchword" type="text" id="searchword" placeholder="검색어를 입력해주세요.">
+	</div>
+	<div align="center">
 		<table>
 			<tr>
 				<td align="center">번호</td>
@@ -42,7 +43,7 @@ table {
 							<td>${sjBoard.boardPostNum}</td>
 							<td width=200 align="center">
 								<a href="${pageContext.request.contextPath }/board/postDetail
-								?boardSubject=${sjBoard.boardSubject}">
+								?boardPostNum=${sjBoard.boardPostNum}">
 									${sjBoard.boardSubject}
 								</a>
 							</td>
@@ -55,6 +56,10 @@ table {
 			</c:choose>
 			
 		</table>
+	</div>
+	<div align="right">
+		<button
+			onclick="location.href='${pageContext.request.contextPath}/board/addPost';">글쓰기</button>
 	</div>
 </body>
 </html>

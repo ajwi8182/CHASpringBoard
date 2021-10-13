@@ -25,12 +25,12 @@ public class SJBoardDAOImpl implements SJBoardDAO{
 	}
 	
 	@Override
-	public SJBoard selectBoardPost(String boardSubject) {
-		return sqlSession.getMapper(SJBoardMapper.class).selectBoardPost(boardSubject);
+	public SJBoard selectBoardPost(int boardPostNum) {
+		return sqlSession.getMapper(SJBoardMapper.class).selectBoardPost(boardPostNum);
 	}
 	
 	@Override
-	public int deleteBoardPost(String boardSubject) {
-		return sqlSession.getMapper(SJBoardMapper.class).deleteBoardPost(boardSubject);
+	public int deleteBoardPost(int boardPostNum) {
+		return sqlSession.getMapper(SJBoardMapper.class).deleteBoardPost(boardPostNum);
 	}
 }

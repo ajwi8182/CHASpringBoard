@@ -7,6 +7,6 @@ import com.SpringBoard.Cha.dto.SJBoard;
 public interface SJBoardDAO {
 	int insertBoard(SJBoard sjBoard);
 	List<SJBoard> selectBoardList();
-	SJBoard selectBoardPost(String boardSubject);
-	int deleteBoardPost(String boardSubject);
+	SJBoard selectBoardPost(int boardPostNum);
+	int deleteBoardPost(int boardPostNum);
 }
