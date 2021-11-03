@@ -20,27 +20,27 @@ public class SJBoardController {
 	@Autowired
 	private SJBoardService sjBoardService;
 	
-	//게시글 작성
+	//게시판 - 게시글 작성
 	@RequestMapping(value = "/addPost", method = RequestMethod.GET)
 	public String addPost() {
 		return "board/bWriteForm";
 	}
 	
-	//게시글 작성
+	//게시판 - 게시글 작성
 	@RequestMapping(value = "/addPost", method = RequestMethod.POST)
 	public String addPost(@ModelAttribute SJBoard sjBoard, Model model) {
 		sjBoardService.addSJBoard(sjBoard);
 		return "redirect:/board/display";
 	}
 	
-	//게시글 목록
+	//게시판 - 게시글 목록
 	@RequestMapping("/display")
 	public String display(Model model) {
 		model.addAttribute("sjBoardList", sjBoardService.getSJBoardList());
 		return "board/bMain";
 	}
 	
-	//게시물 상세보기
+	//게시판 - 게시물 상세보기
 	@RequestMapping(value="/postDetail")
 	public String view(@RequestParam int boardPostNum, Model model) throws SaraminfoNotFoundException{
 		model.addAttribute("sjBoard", sjBoardService.getBoardPost(boardPostNum));
@@ -55,6 +55,7 @@ public class SJBoardController {
 		return "redirect:/board/display";
 	}
 	*/
+	//게시판 - 게시물 삭제
 	@RequestMapping("/postDelete") 
 	public String postDelte(@RequestParam int boardPostNum, HttpSession session) {
 		sjBoardService.removeBoardPost(boardPostNum);

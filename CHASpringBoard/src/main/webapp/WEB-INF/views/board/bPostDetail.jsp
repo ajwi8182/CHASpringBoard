@@ -27,12 +27,12 @@
 					<td>
 						<input type="text" name="boardSubject" id="boardSubject"
 						width=500 value="${sjBoard.boardSubject }">
-						</td>
+					</td>
 				</tr>
 				<tr>
 					<td>내용</td>
 					<td>
-						<textarea rows="30" cols="80" name="boardContent"
+						<textarea rows="20" cols="80" name="boardContent"
 							id="boardContent">
 							${sjBoard.boardContent }
 						</textarea>

@@ -5,12 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>ChaSpringBoard</title>
-<style type="text/css">
-div {
-	background-color: #D9E5FF;
-	width: 800px;
-}
 
+<style type="text/css">
 .writetitle {
 	border-bottom: 3px;
 	border-bottom-style: solid;
@@ -33,34 +29,29 @@ button {
 </head>
 <body>
 	<h2 class="writetitle">글쓰기</h2>
-	<div>
-		<form id="boardForm" method="post">
+	
+		<form name="boardForm" id="boardForm" method="post">
 			<input type="hidden" name="boardRef" value="0"> 
-			<input type="hidden" name="boardReStep" value="0"> 
-			<input type="hidden" name="boardReLevel" value="0 "> 
+			<input type="hidden" name="boardReStep" value="0">
+			<input type="hidden" name="boardReLevel" value="0 ">
 			<input type="hidden" name="boardWriterId" value="0">
-			<table border="0" bgcolor="FFD9EC">
+			<table>
 				<tr>
 					<td>제목</td>
-					<td>
-					<input type="text" name="boardSubject" id="boardSubject">
+					<td><input type="text" name="boardSubject" id="boardSubject">
 					</td>
 				</tr>
 				<tr>
 					<td>내용</td>
 					<td>
 						<!-- <input type="text" name="boardContent" value="${sjboard.BoardContent }"> -->
-							<textarea rows="30" cols="80" name="boardContent" id="boardContent">
+						<textarea rows="30" cols="80" name="boardContent"
+							id="boardContent">
 							</textarea>
 					</td>
 				</tr>
-				<tr>
-					<td colspan='2' align="center">
-						<button type="submit" class="sbmBtn">완료</button>
-					</td>
-				</tr>
 			</table>
+			<button type="submit" class="sbmBtn">완료</button>
 		</form>
-	</div>
 </body>
 </html>

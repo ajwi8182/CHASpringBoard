@@ -14,21 +14,25 @@ public class SJBoardServiceImpl implements SJBoardService{
 	@Autowired
 	private SJBoardDAO sjBoardDAO;
 	
-	@Override
-	public void addSJBoard(SJBoard sjBoard) {
-		sjBoardDAO.insertBoard(sjBoard);
-	}
-	
+	/*게시판 - 게시판 목록*/
 	@Override
 	public List<SJBoard> getSJBoardList(){
 		return sjBoardDAO.selectBoardList();
 	}
 	
+	/*게시판 - 게시글 추가*/
+	@Override
+	public void addSJBoard(SJBoard sjBoard) {
+		sjBoardDAO.insertBoard(sjBoard);
+	}
+		
+	/*게시판 - 게시글 상세 조회*/
 	@Override
 	public SJBoard getBoardPost(int boardPostNum) {
 		return sjBoardDAO.selectBoardPost(boardPostNum);
 	}
 	
+	/*게시판 - 게시글 삭제*/
 	@Transactional
 	@Override
 	public void removeBoardPost(int boardPostNum) {

@@ -19,7 +19,7 @@ table {
 <body>
 	<h1>SJ's Board</h1>
 	<div align="center">
-	<input name="searchword" type="text" id="searchword" placeholder="검색어를 입력해주세요.">
+	<input name="searchword" type="text" id="searchword">
 	</div>
 	<div align="center">
 		<table>
@@ -59,7 +59,8 @@ table {
 	</div>
 	<div align="right">
 		<button
-			onclick="location.href='${pageContext.request.contextPath}/board/addPost';">글쓰기</button>
+			onclick="location.href='${pageContext.request.contextPath}/board/addPost';">글쓰기
+			</button>
 	</div>
 </body>
 </html>
