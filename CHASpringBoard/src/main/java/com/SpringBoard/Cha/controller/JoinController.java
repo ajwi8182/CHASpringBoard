@@ -15,6 +15,7 @@ import com.SpringBoard.Cha.exception.SaraminfoNotFoundException;
 import com.SpringBoard.Cha.service.SaramService;
 
 @Controller
+@RequestMapping("/join")
 public class JoinController {
 	@Autowired
 	private SaramService saramService;
@@ -28,7 +29,7 @@ public class JoinController {
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String join(@ModelAttribute Saram saram) {
 		saramService.addSaram(saram);
-		return "redirect:/login";
+		return "redirect:/join/login"; //회원가입해도 회원목록에 추가 안됐었는데 이부분 고쳐서 해결11/24
 	}
 
 	// 로그인

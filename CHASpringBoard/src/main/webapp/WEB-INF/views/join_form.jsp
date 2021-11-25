@@ -21,7 +21,7 @@ function saramJoin(){
 	joinForm.name.focus();
 	return;
 	}
-	joinForm.action ="${pageContext.request.contextPath}/join";
+	joinForm.action ="${pageContext.request.contextPath}/join/join";
 	joinForm.submit();
 }
 </script>

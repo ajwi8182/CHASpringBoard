@@ -14,9 +14,28 @@ table {
 	cellpadding: 8px;
 	width: 900px;
 }
+ul{
+	list-style: none;
+	padding:0;
+}
+li{
+	display: inline-block; <!--로그인 메뉴 일렬로 배치-->
+}
+a{
+	text-decoration: none;
+}
+.right-box{
+	float: right; <!--메뉴바 오른쪽정렬-->
+}
 </style>
 </head>
 <body>
+<div class="right-box">
+	<ul>
+		<li><a href="">회원가입</a></li>
+		<li><a href="">로그인</a></li>
+	</ul>
+</div>
 	<h1>SJ's Board</h1>
 	<div align="center">
 	<input name="searchword" type="text" id="searchword">
